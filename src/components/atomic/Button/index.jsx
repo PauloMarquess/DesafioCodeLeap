@@ -1,10 +1,10 @@
 import React from 'react';
 import { ButtonStyle } from './style';
 
-const Button =({title,type,background,color})=> {
+const Button =({title,type,background,color,onClick})=> {
   return (
     <>
-      <ButtonStyle  background={background} color={color} type={type}>{title}</ButtonStyle>
+      <ButtonStyle onClick={onClick}  background={background} color={color} type={type}>{title}</ButtonStyle>
     </>
   )
 }

@@ -1,14 +1,19 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import Button from "../../components/atomic/Button";
 import { FormContainer, Container, Card, CardButton } from "./styled";
 
 const Home = () => {
   const [optionComponent, setOptionComponent] = useState("default");
+  const handleSubmit = () => {
+    history.push("/main-screen");
+  };
   const Components = {
     default: <Button title="ENTER" background color cursor/>,
-    buttonActive: <Button title="ENTER" />,
+    buttonActive: <Button title="ENTER" type="submit" onClick={handleSubmit}/>,
   };
- 
+  const history =useHistory()
+  
   
   return (
     <Container>
